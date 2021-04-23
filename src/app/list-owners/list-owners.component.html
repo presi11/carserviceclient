@@ -4,7 +4,7 @@
       <mat-selection-list #owner [(ngModel)]="selectOwners">
         <mat-list-option *ngFor="let owner of owners" [value]=owner.id>
           <h3 mat-line>
-            <a mat-button [routerLink]="['/owner-edit', owner.id]">{{owner.name}}</a>
+            <a mat-flat-button color="warn" [routerLink]="['/owner-edit', owner.id]">{{owner.name}}</a>
           </h3>
         </mat-list-option>
       </mat-selection-list>
