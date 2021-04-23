@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'owner-add',
     component: OwnerEditComponent
   },
+  {
+    path: 'owner-delete',
+    component: ListOwnersComponent
+  },
 ];
 
 @NgModule({

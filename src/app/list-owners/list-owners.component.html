@@ -1,14 +1,14 @@
 <mat-card>
     <mat-card-title>Owners List</mat-card-title>
     <mat-card-content>
-      <mat-list>
-        <mat-list-item *ngFor="let owner of owners">
+      <mat-selection-list #owner [(ngModel)]="selectOwners">
+        <mat-list-option *ngFor="let owner of owners" [value]=owner.id>
           <h3 mat-line>
             <a mat-button [routerLink]="['/owner-edit', owner.id]">{{owner.name}}</a>
           </h3>
-        </mat-list-item>
-      </mat-list>
+        </mat-list-option>
+      </mat-selection-list>
     </mat-card-content>
-  
     <button mat-fab color="primary" [routerLink]="['/owner-add']">Add</button>
+    <button mat-fab color="accent" (click)="DeleteOwners()">Delete</button>
   </mat-card>

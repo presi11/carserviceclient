@@ -1,7 +1,9 @@
 <mat-toolbar color="primary">
   <span>Welcome to {{title}}!</span>
-  <button mat-raised-button color="primary" [routerLink]="['/list-owners']">List owners</button>
-  <button mat-raised-button color="danger" [routerLink]="['/car-list']">List cars</button>
+  <span class="example-spacer"></span>
+  <button mat-raised-button color="secondary" [routerLink]="['/list-owners']">List owners</button>
+  <span class="example-spacer"></span>
+  <button mat-raised-button auto color="warn" [routerLink]="['/car-list']">List cars</button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
